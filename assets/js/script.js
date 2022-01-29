@@ -1,12 +1,14 @@
+//THIS IS FOR THE VALUE OF THE INPUT
+var input = document.getElementById("cityname");
 // THIS IF FOR THE BUTTON THAT SUBMITS CITY IN INPUT FIELD
 var submitButton = document.querySelector("#submit-button");
+// BELOW IS THE PLACE WHERE I WANT DATA TO GO
+var displayEl = document.querySelector("#city-search-term")
+
 
 // additional city WILL EVENTUALLY GO HERE
 
 // var cityInputEl = document.querySelector("#cityname");
-
-// BELOW IS THE PLACE WHERE I WANT DATA TO GO
-var displayEl = document.querySelector("#display-panel")
 
 // var citySearchTerm = document.querySelector("#city-search-term");
 
@@ -32,11 +34,15 @@ var displayEl = document.querySelector("#display-panel")
 // a var buttonClickHandler will go here for additional cities
 
 
-function getApi() {
-
-    var cityName = "toronto,ca"
+submitButton.addEventListener("click", function (event) {
+    event.preventDefault;
+    var cityName = input.value;  
     
-    fetch("https://aerisweather1.p.rapidapi.com/sunmoon/" + cityName, {
+// function getApi() {
+
+   // var cityName = "toronto,ca"
+    
+    fetch("https://aerisweather1.p.rapidapi.com/observations/" + cityName, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "aerisweather1.p.rapidapi.com",
@@ -47,14 +53,20 @@ function getApi() {
             return response.json(); 
         })
         .then(function(data) {
-            console.log(data);
-            
-            for (var i = 0; i <data.length; i++) {
+            var observations = data.response.ob.tempC;
+            console.log(observations);
+          //  for (var i = 0; i <observations.length; i++) {
+                var p = document.createElement('p');
+                var p2 = document.createElement('p')
 
-                console.log(data[i]);
-            }
+
+                p.textContent = cityName;
+                p2.textContent = observations;
+
+                displayEl.appendChild(p);
+                displayEl.appendChild(p2);
         });
-    }
+    })
 
 
 
@@ -66,4 +78,4 @@ function getApi() {
 // submitButton.addEventListener("submit", getApi);
 // additional cities event listener goes here
 
-getApi();
+// getApi();
