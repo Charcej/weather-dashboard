@@ -28,10 +28,10 @@
 
     <main class="flex-row justify-space-between">
         <!-- Left side of page -->
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3 city-search">
             <h3>Search for a City:</h3>
             <input id="cityname" type="text" placeholder="Toronto" autofocus="true" class="city-input" />
-            <button type="submit" class="btn">Search</button>
+            <button type="submit" class="btn" id=submit-button>Search</button>
             <HR NOSHADE="noshade">
         
 
@@ -49,8 +49,10 @@
 
             <!-- Right side of page -->
             <div class="col-12 col-md-9">
-                <div class="display-panel"></div>
-                <h4>5-Day Forecast</h4>
+                <div class="display-panel"><span id="city-search-term"></span></div>
+                <h4>
+                    5-Day Forecast
+                </h4>
                     <div id="card-1" class="day-one card"></div>
                     <div id="card-2" class="day-two card"></div>
                     <div id="card-3" class="day-three card"></div>
