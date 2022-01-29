@@ -1,0 +1,131 @@
+:root {
+    --primary: #00008B;
+    --secondary: #ADD8E6;
+    --tertiary: #D3D3D3;
+    --slate-grey: #708090;
+    --black: #000000;
+    --white: #FFFFFF; 
+    --dark-grey: #384d54;
+    --border-radius: .3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--black); 
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+    color: var(--black);
+    line-height: 1.25;
+}
+
+main {
+    margin: 20px auto;
+    width: 94%;
+}
+
+.hero {
+    padding: 3% 4%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .city-input {
+      display: block;
+      width: 100%;
+      padding: 3%;
+      margin: 5px 0;
+      font-size: 1.2rem;
+      border: 2px solid var(--slate-grey);
+      border-radius: var(--border-radius);
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    text-decoration:none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    box-shadow: 3px 3px var(--primary);
+    transform: translate(-1px, -1px);
+  }
+
+  .btn:hover {
+    color: var(--white);
+    background-color: var(--slate-grey);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px var(--primary);
+  }
+
+  .btn-inline {
+    display: inline;
+  }
+
+  .list-group {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .list-item {
+    margin-bottom: 10px;
+    padding: 1.5%;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+  }
+
+.card {
+    margin: 15px 0 20px 0;
+    border: 3px solid var(--black);
+    border-radius: var(--border-radius);
+    background-color: var(--dark-grey);
+    color: var(--white);
+    width: 18%;
+    display: inline-flex;
+    margin-right: 13px;
+    padding-bottom: 190px;
+  }
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .display-panel {
+      padding: 150px;
+      width: 98%;
+      border: 3px solid var(--black); 
+      margin-bottom: 15px;
+  }
+  
+  

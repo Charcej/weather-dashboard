@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!-- Font link from git it done -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <!-- Additional font link from git it done -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- Font link from work day scheduler -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"/>
+    <!-- Additional font link from work day scheduler -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body class="flex column min-100-vh">
+    <!-- Stuff at top of page -->
+    <header class="hero">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="flex-row justify-space-between">
+        <!-- Left side of page -->
+        <div class="col-12 col-md-3">
+            <h3>Search for a City:</h3>
+            <input id="cityname" type="text" placeholder="Toronto" autofocus="true" class="city-input" />
+            <button type="submit" class="btn">Search</button>
+            <HR NOSHADE="noshade">
+        
+
+            <div id=city-buttons>
+                <button data-id="Vancouver" class="btn">Vancouver</button>
+                <button data-id="Calgary" class="btn">Calgary</button>
+                <button data-id="Regina" class="btn">Regina</button>
+                <button data-id="Winnipeg" class="btn">Winnipeg</button>
+                <button data-id="Ottawa" class="btn">Ottawa</button>
+                <button data-id="Montreal" class="btn">Montreal</button>
+                <button data-id="Yellowknife" class="btn">Yellowknife</button>
+                <button data-id="Halifax" class="btn">Halifax</button>
+            </div>
+        </div>
+
+            <!-- Right side of page -->
+            <div class="col-12 col-md-9">
+                <div class="display-panel"></div>
+                <h3>5-Day Forecast</h3>
+                    <div id="card-1" class="day-one card">1</div>
+                    <div id="card-2" class="day-two card">2</div>
+                    <div id="card-3" class="day-three card">3</div>
+                    <div id="card-4" class="day-four card">4</div>
+                    <div id="card-5" class="day-five card">5</div>
+            </div>
+    </main>
+
+    
+    <!-- jQuery and custom js file link under it -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
