@@ -129,7 +129,7 @@ main {
   }
 
   .display-panel {
-      padding: 150px;
+      padding: 100px;
       width: 95%;
       border: 2px solid var(--black); 
       margin-bottom: 15px;

@@ -5,7 +5,6 @@ var submitButton = document.querySelector("#submit-button");
 // BELOW IS THE PLACE WHERE I WANT DATA TO GO
 var displayEl = document.querySelector("#city-search-term")
 
-
 // additional city WILL EVENTUALLY GO HERE
 
 // var cityInputEl = document.querySelector("#cityname");
@@ -36,7 +35,7 @@ var displayEl = document.querySelector("#city-search-term")
 
 submitButton.addEventListener("click", function (event) {
     event.preventDefault;
-    var cityName = input.value;  
+    var cityName = input.value + ",ca";  
     
 // function getApi() {
 
@@ -56,13 +55,18 @@ submitButton.addEventListener("click", function (event) {
             var observations = data.response.ob.tempC;
             console.log(observations);
           //  for (var i = 0; i <observations.length; i++) {
+                var h2 = document.createElement('h2');
                 var p = document.createElement('p');
-                var p2 = document.createElement('p')
+                var p2 = document.createElement('p');
 
+                newCityName = cityName.replace(',ca', '');
 
-                p.textContent = cityName;
-                p2.textContent = observations;
+                h2.textContent = newCityName;
+                p.textContent = "";
+                p2.textContent = "Temp: " + observations;
 
+                displayEl.innerHTML = "";
+                displayEl.appendChild(h2);
                 displayEl.appendChild(p);
                 displayEl.appendChild(p2);
         });
