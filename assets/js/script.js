@@ -11,6 +11,9 @@ var displayEl = document.querySelector("#city-search-term")
 
 // var citySearchTerm = document.querySelector("#city-search-term");
 
+// THIS IS FOR GENERATING TODAY'S DATE WITH MOMENT
+var todaysDate = moment().format('ddd, MMM D');
+console.log(todaysDate);
 
 // var submitHandler = function (event) {
 //     // prevent page from refreshing
@@ -32,14 +35,9 @@ var displayEl = document.querySelector("#city-search-term")
 
 // a var buttonClickHandler will go here for additional cities
 
-
 submitButton.addEventListener("click", function (event) {
     event.preventDefault;
     var cityName = input.value + ",ca";  
-    
-// function getApi() {
-
-   // var cityName = "toronto,ca"
     
     fetch("https://aerisweather1.p.rapidapi.com/observations/" + cityName, {
 	"method": "GET",
@@ -53,33 +51,43 @@ submitButton.addEventListener("click", function (event) {
         })
         .then(function(data) {
             var observations = data.response.ob.tempC;
+            var observations1 = data.response.ob.windchillC;
+            var observations2 = data.response.ob.windMPH;
+            var observations3 = data.response.ob.humidity;
+            console.log(data);
             console.log(observations);
-          //  for (var i = 0; i <observations.length; i++) {
+          
+                var date = document.createElement('h2');
                 var h2 = document.createElement('h2');
                 var p = document.createElement('p');
                 var p2 = document.createElement('p');
+                var p3 = document.createElement('p');
+                var p4 = document.createElement('p');
+                var p5 = document.createElement('p');
 
                 newCityName = cityName.replace(',ca', '');
 
+                date.textContent = todaysDate;
                 h2.textContent = newCityName;
                 p.textContent = "";
-                p2.textContent = "Temp: " + observations;
+                p2.textContent = "Temp: " + observations + " c";
+                p3.textContent = "Windchill: " + observations1 + " c";
+                p4.textContent = "Wind: " + observations2 + " MPH";
+                p5.textContent = "Humidity: " + observations3 + " %rh";
 
                 displayEl.innerHTML = "";
+                displayEl.appendChild(date);
                 displayEl.appendChild(h2);
                 displayEl.appendChild(p);
                 displayEl.appendChild(p2);
+                displayEl.appendChild(p3);
+                displayEl.appendChild(p4);
+                displayEl.appendChild(p5);
         });
     })
 
-
-
 // a getFeaturedCity function will go here for additional cities
 
-// displayWeather function will go here
+// displayWeather in cards for 5 day forecast function will go here
 
-
-// submitButton.addEventListener("submit", getApi);
 // additional cities event listener goes here
-
-// getApi();

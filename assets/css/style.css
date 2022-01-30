@@ -91,7 +91,7 @@ main {
       background-color: var(--slate-grey);
   }
 
-  .list-group {
+  /* .list-group {
     padding: 0;
     list-style: none;
   }
@@ -103,7 +103,7 @@ main {
     background-color: var(--white);
     color: var(--black);
     text-decoration: none;
-  }
+  } */
 
 .card {
     margin: 15px 0 20px 0;
@@ -134,6 +134,12 @@ main {
       border: 2px solid var(--black); 
       margin-bottom: 15px;
       color: var(--black);
+      background-color: darkolivegreen;
+  }
+
+  .display-panel h2 p {
+    padding: 0;
+    position: relative;
   }
   
   
