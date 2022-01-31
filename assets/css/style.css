@@ -24,16 +24,16 @@ body {
     font-size: 16px;
 }
 
-h2,
+/* h2,
 h3,
-/* h4, */
+h4,
 h5,
 h6 {
     font-weight: 700;
     margin: 0;
     color: var(--black);
     line-height: 1.25;
-}
+} */
 
 main {
     margin: 20px auto;
@@ -91,20 +91,6 @@ main {
       background-color: var(--slate-grey);
   }
 
-  /* .list-group {
-    padding: 0;
-    list-style: none;
-  }
-  
-  .list-item {
-    margin-bottom: 10px;
-    padding: 1.5%;
-    border-radius: var(--border-radius);
-    background-color: var(--white);
-    color: var(--black);
-    text-decoration: none;
-  } */
-
 .card {
     margin: 15px 0 20px 0;
     border: 3px solid var(--black);
@@ -115,7 +101,12 @@ main {
     display: inline-flex;
     margin-right: 13px;
     margin-left: 0px;
-    padding-bottom: 200px;
+    /* padding-bottom: 50px; */
+    /* position: relative; */
+  }
+
+  .card p {
+    /* position: absolute; */
   }
 
 .flex-row {
@@ -130,25 +121,19 @@ main {
   }
 
   .display-panel {
-    /* padding: 100px;  */
-    padding:50px;
     width: 95%;
     border: 2px solid var(--black); 
     margin-bottom: 15px;
     color: var(--black);
     background-color: var(--white);
     position: relative;
+    /* padding: 50px; */
   }
 
-  /* .display-panel h2 h3 p {
-    padding: 0;
+  .display-panel h2 h4 p {
     position: absolute;
-  } */
-
-  .display-content {
-    padding: 0;
-    display: absolute;
-
   }
+
+  
   
   
