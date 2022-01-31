@@ -57,6 +57,7 @@ submitButton.addEventListener("click", function (event) {
             var observations3 = data.response.ob.humidity;
             console.log(data);
             console.log(observations);
+            console.log("this is the icon", data.response.ob.icon);
 
                 var img = document.createElement('img');
                 var date = document.createElement('h4');
@@ -69,7 +70,7 @@ submitButton.addEventListener("click", function (event) {
 
                 newCityName = cityName.replace(',ca', '');
 
-                img.src = observationsIcon.href;
+                img.textContent = observationsIcon;
                 date.textContent = todaysDate;
                 h2.textContent = newCityName;
                 p.textContent = "";
