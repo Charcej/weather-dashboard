@@ -50,14 +50,16 @@ submitButton.addEventListener("click", function (event) {
             return response.json(); 
         })
         .then(function(data) {
+            var observationsIcon = data.response.ob.icon;
             var observations = data.response.ob.tempC;
             var observations1 = data.response.ob.windchillC;
             var observations2 = data.response.ob.windMPH;
             var observations3 = data.response.ob.humidity;
             console.log(data);
             console.log(observations);
-          
-                var date = document.createElement('h2');
+
+                var img = document.createElement('img');
+                var date = document.createElement('h4');
                 var h2 = document.createElement('h2');
                 var p = document.createElement('p');
                 var p2 = document.createElement('p');
@@ -67,6 +69,7 @@ submitButton.addEventListener("click", function (event) {
 
                 newCityName = cityName.replace(',ca', '');
 
+                img.src = observationsIcon.href;
                 date.textContent = todaysDate;
                 h2.textContent = newCityName;
                 p.textContent = "";
@@ -76,6 +79,7 @@ submitButton.addEventListener("click", function (event) {
                 p5.textContent = "Humidity: " + observations3 + " %rh";
 
                 displayEl.innerHTML = "";
+                displayEl.appendChild(img);
                 displayEl.appendChild(date);
                 displayEl.appendChild(h2);
                 displayEl.appendChild(p);

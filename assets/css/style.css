@@ -26,7 +26,7 @@ body {
 
 h2,
 h3,
-h4,
+/* h4, */
 h5,
 h6 {
     font-weight: 700;
@@ -114,6 +114,7 @@ main {
     width: 17%;
     display: inline-flex;
     margin-right: 13px;
+    margin-left: 0px;
     padding-bottom: 200px;
   }
 
@@ -129,17 +130,25 @@ main {
   }
 
   .display-panel {
-      padding: 100px;
-      width: 95%;
-      border: 2px solid var(--black); 
-      margin-bottom: 15px;
-      color: var(--black);
-      background-color: darkolivegreen;
+    /* padding: 100px;  */
+    padding:50px;
+    width: 95%;
+    border: 2px solid var(--black); 
+    margin-bottom: 15px;
+    color: var(--black);
+    background-color: var(--white);
+    position: relative;
   }
 
-  .display-panel h2 p {
+  /* .display-panel h2 h3 p {
     padding: 0;
-    position: relative;
+    position: absolute;
+  } */
+
+  .display-content {
+    padding: 0;
+    display: absolute;
+
   }
   
   
