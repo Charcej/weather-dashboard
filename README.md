@@ -1,10 +1,12 @@
 # Weather Dashboard
 
 ## Purpose
-A weather dashboard app that lets a user plug in a city and get the current date, temperature, windchill, wind, and himidity information, as well as a 5-day forecast for temp, win, and humidity. NOTE: I had a few issues making it work Internationally based on the API I chose to use so I made it a 'Canadian Weather Dashbooard' as it seems to work for all Canadian cities. 
+A weather dashboard app that lets a user plug in a city and get the current date, temperature, windchill, wind, and humidity information, as well as a 5-day forecast for temp, wind, and humidity. NOTE: I had a few issues making it work Internationally based on the API I chose to use so I made it a 'Canadian Weather Dashbooard' as it seems to work for all Canadian cities. 
 
 ## This Version
-This version works quite well but in a future version I would make it work Internationally. Plus, in this version you have to type in a city each time - it does clear successfully but does not save in local storage and keep quick buttons available below search window. All of these missing features were part of this assignment but my biggest obstacle with this assignment was time. Unfortunately I've run out of time to keep at the remaining issues to feature and so will have to circle back at a later date. This is a prime example of getting an MVP out the door.
+This version works quite well but in a future version I would make it work Internationally. Plus, in this version you have to type in a city each time - it does clear successfully but does not save in local storage and keep quick buttons available below search window. Plus, I had difficulty targeting the icon info and displaying it.
+
+All of these missing features were part of this assignment but my biggest obstacle with this assignment was time. Unfortunately, I've run out of time to keep at the remaining issues to feature and so will have to circle back at a later date. I guess this is a prime example of getting an MVP out the door.
 
 ## Built With
 * HTML
