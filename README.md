@@ -21,7 +21,7 @@ This version works quite well but in a future version I would make it work Inter
 https://charcej.github.io/weather-dashboard/
 
 ## Screenshot of top of website
-<img width="1193" alt="![Screen Shot 2022-02-05 at 4 28 49 PM](https://user-images.githubusercontent.com/94859458/152659636-aeb6c8f6-ff7b-44f6-b1b4-49878b74d056.png)">
+![Screen Shot 2022-02-05 at 4 28 49 PM](https://user-images.githubusercontent.com/94859458/152659636-aeb6c8f6-ff7b-44f6-b1b4-49878b74d056.png)
 
 ## Contribution
 Made with ❤️ by Charles Johnston
